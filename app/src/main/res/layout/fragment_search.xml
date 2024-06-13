@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/the_background"
+    tools:context=".HomeFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:id="@+id/search_container"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@id/logo"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_bar_background">
+
+            <Button
+                android:id="@+id/search_button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@android:drawable/ic_menu_search"
+                android:contentDescription="Search button" />
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/search_button"
+                android:hint="Search recipes"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:singleLine="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGreek"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Greek"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/button_selector"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVegan"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Vegan"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/unselected_category_btn"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFrench"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="French"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/unselected_category_btn"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnItalian"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Italian"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/unselected_category_btn"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFusion"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Fusion"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/unselected_category_btn"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAsian"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Asian"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/unselected_category_btn"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMexican"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Mexican"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/unselected_category_btn"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAmerican"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="American"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/unselected_category_btn"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnIndian"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Indian"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/unselected_category_btn"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMediterranean"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Mediterranean"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/unselected_category_btn"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMiddleEastern"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Middle Eastern"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/unselected_category_btn"
+                android:padding="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDesserts"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Desserts"
+                android:textAllCaps="false"
+                android:textColor="@color/approx_gray"
+                android:background="@drawable/unselected_category_btn"
+                android:padding="8dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
+
+

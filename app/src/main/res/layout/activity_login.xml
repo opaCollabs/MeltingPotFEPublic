@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to MeltingPot"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_melting_pot_logo"
+        android:layout_below="@id/welcomeTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:id="@+id/emailIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/ic_profile"
+        android:layout_below="@id/logoImageView" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <ImageView
+        android:id="@+id/passwordIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/ic_recipes"
+        android:layout_below="@id/emailEditText" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="16dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:elevation="6dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:background="@drawable/rounded_button_background">
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+</RelativeLayout>

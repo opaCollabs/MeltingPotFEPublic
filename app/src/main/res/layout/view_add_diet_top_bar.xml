@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mint"
+    android:padding="16dp">
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="2dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_back"
+        android:contentDescription="@string/back" />
+
+    <EditText
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/btn_back"
+        android:layout_toStartOf="@id/btn_edit"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Diet Title"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:enabled="false" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_edit"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="2dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_edit"
+        android:contentDescription="@string/edit" />
+
+</RelativeLayout>

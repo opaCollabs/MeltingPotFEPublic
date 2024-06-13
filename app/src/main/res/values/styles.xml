@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryDark">@color/orange_dark</item>
+    </style>
+
+    <style name="BottomNavigationViewCentered" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="itemIconSize">32dp</item>
+        <item name="itemTextAppearanceInactive">@android:style/TextAppearance</item>
+        <item name="itemTextAppearanceActive">@android:style/TextAppearance</item>
+    </style>
+
+    <style name="RoundedDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@drawable/pop_up_rounded_button</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

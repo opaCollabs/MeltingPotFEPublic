@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    android:gravity="center_vertical"
+    android:background="@color/dark_cement">
+
+        <TextView
+        android:id="@+id/tv_meal"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:hint="Meal Item"
+        android:textColor="@color/white"
+        android:background="@color/dark_cement"
+        android:tag="null"
+        android:enabled="true" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_remove_meal"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="2dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_remove" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_toggle_visibility"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="2dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_visibility_false" />
+</LinearLayout>

@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to MeltingPot"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_melting_pot_logo"
+        android:layout_below="@id/welcomeTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="16dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:elevation="6dp"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:background="@drawable/rounded_button_background" />
+
+    <TextView
+        android:id="@+id/orTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- or -"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/registerButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="16dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:elevation="6dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:background="@drawable/rounded_button_background" />
+
+</RelativeLayout>

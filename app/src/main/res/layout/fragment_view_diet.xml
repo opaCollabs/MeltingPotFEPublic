@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewDietFragment"
+    android:background="@color/ivory">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/top_bar"
+            layout="@layout/view_add_diet_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="Description"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/army_green" />
+
+                <TextView
+                    android:id="@+id/tv_diet_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="350dp"
+                    android:layout_gravity="center"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/mint" />
+
+                <include
+                    android:id="@+id/day1"
+                    layout="@layout/item_day_of_week" />
+                <include
+                    android:id="@+id/day2"
+                    layout="@layout/item_day_of_week" />
+                <include
+                    android:id="@+id/day3"
+                    layout="@layout/item_day_of_week" />
+                <include
+                    android:id="@+id/day4"
+                    layout="@layout/item_day_of_week" />
+                <include
+                    android:id="@+id/day5"
+                    layout="@layout/item_day_of_week" />
+                <include
+                    android:id="@+id/day6"
+                    layout="@layout/item_day_of_week" />
+                <include
+                    android:id="@+id/day7"
+                    layout="@layout/item_day_of_week" />
+
+                <TextView
+                    android:id="@+id/tv_add_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="Additional Info and Instructions"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/army_green" />
+
+                <TextView
+                    android:id="@+id/tv_diet_add_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unlock to view"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_unlock_plan"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Unlock for $0.00!"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@color/mint"
+                    android:background="@drawable/rounded_edges_rect"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

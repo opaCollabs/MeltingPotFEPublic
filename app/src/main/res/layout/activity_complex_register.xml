@@ -1,0 +1,358 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/registerButton">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:id="@+id/registerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lets get started with your profile!"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp" />
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/registerTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:background="@drawable/rounded_white_edittext"/>
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameEditText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/rounded_white_edittext" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailEditText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:background="@drawable/rounded_white_edittext" />
+
+            <EditText
+                android:id="@+id/confirmPasswordEditText"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/passwordEditText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:background="@drawable/rounded_white_edittext" />
+
+            <TextView
+                android:id="@+id/userRoleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/confirmPasswordEditText"
+                android:layout_marginTop="24dp"
+                android:layout_centerHorizontal="true"
+                android:text="I am a..."
+                android:textSize="16sp"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userRoleLabel"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnUserRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Food enjoyer"
+                    android:textAllCaps="false"
+                    android:textColor="@color/approx_gray"
+                    android:background="@drawable/unselected_category_btn"
+                    android:padding="8dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNutritionistRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Nutritionist"
+                    android:textAllCaps="false"
+                    android:textColor="@color/approx_gray"
+                    android:background="@drawable/unselected_category_btn"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/categoriesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userRoleLabel"
+                android:layout_marginTop="80dp"
+                android:layout_centerHorizontal="true"
+                android:text="Select Interested Categories"
+                android:textSize="16sp"
+                android:textColor="@color/white" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/categoriesLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp">
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="4"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnGreek"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Greek"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/button_selector"
+                        android:padding="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnVegan"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Vegan"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/unselected_category_btn"
+                        android:padding="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnFrench"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="French"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/unselected_category_btn"
+                        android:padding="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnItalian"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Italian"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/unselected_category_btn"
+                        android:padding="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnFusion"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Fusion"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/unselected_category_btn"
+                        android:padding="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAsian"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Asian"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/unselected_category_btn"
+                        android:padding="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnMexican"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Mexican"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/unselected_category_btn"
+                        android:padding="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAmerican"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="American"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/unselected_category_btn"
+                        android:padding="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnIndian"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Indian"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/unselected_category_btn"
+                        android:padding="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnMediterranean"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Mediterranean"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/unselected_category_btn"
+                        android:padding="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnMiddleEastern"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Middle Eastern"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/unselected_category_btn"
+                        android:padding="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnDesserts"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Desserts"
+                        android:textAllCaps="false"
+                        android:textColor="@color/approx_gray"
+                        android:background="@drawable/unselected_category_btn"
+                        android:padding="8dp" />
+                </GridLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/testScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/categoriesLabel"
+                android:layout_marginTop="240dp"
+                android:text="Add an image of yourself or your certification!"
+                android:textSize="16sp"
+                android:textColor="@color/white" />
+
+
+            <com.example.meltingpot.CircularImageView
+                android:id="@+id/imageView"
+                android:layout_width="180dp"
+                android:layout_height="135dp"
+                android:layout_below="@id/testScrollView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="111dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="111dp"
+                android:background="@drawable/round_background"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_placeholder" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/uploadImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Image"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/dark_gray" />
+
+                <Button
+                    android:id="@+id/uploadFileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload File"
+                    android:backgroundTint="@color/dark_gray"
+                    android:enabled="false"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="8dp" />
+
+                <TextView
+                    android:id="@+id/fileNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="example.pdf"
+                    android:textColor="@color/light_cement"
+                    />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="16dp"
+        android:text="All set!"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/approx_gray"
+        android:elevation="4dp"
+        android:textAllCaps="false"
+        android:background="@drawable/rounded_button_background" />
+
+</RelativeLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@color/ivory">
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Day of Week"
+        android:textStyle="bold"
+        android:textColor="@color/army_green"
+        android:textSize="18sp"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="toggleExpand" />
+
+    <LinearLayout
+        android:id="@+id/expandable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:backgroundTint="@color/medium_cement"
+        android:background="@drawable/rounded_edges_rect">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@color/medium_cement">
+
+            <TextView
+                android:id="@+id/tv_breakfast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Breakfast"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:onClick="toggleExpandMeal" />
+
+            <LinearLayout
+                android:id="@+id/expandable_breakfast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="8dp"
+                android:background="@drawable/rounded_edges_rect"
+                android:backgroundTint="@color/dark_cement">
+
+                <include
+                    android:id="@+id/item_meal_template"
+                    layout="@layout/item_meal" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_add_breakfast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:text="Add"
+                    android:backgroundTint="@color/mint" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@color/medium_cement">
+
+            <TextView
+                android:id="@+id/tv_lunch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lunch"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:onClick="toggleExpandMeal" />
+
+            <LinearLayout
+                android:id="@+id/expandable_lunch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="8dp"
+                android:background="@drawable/rounded_edges_rect"
+                android:backgroundTint="@color/dark_cement">
+
+                <include
+                    android:id="@+id/item_meal_template"
+                    layout="@layout/item_meal" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_add_lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:textAllCaps="false"
+                    android:text="Add"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/mint" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@color/medium_cement">
+
+            <TextView
+                android:id="@+id/tv_dinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Dinner"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:onClick="toggleExpandMeal" />
+
+            <LinearLayout
+                android:id="@+id/expandable_dinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="8dp"
+                android:background="@drawable/rounded_edges_rect"
+                android:backgroundTint="@color/dark_cement">
+
+                <include
+                    android:id="@+id/item_meal_template"
+                    layout="@layout/item_meal" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_add_dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:text="Add"
+                    android:backgroundTint="@color/mint" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
